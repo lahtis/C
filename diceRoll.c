@@ -12,7 +12,7 @@ int main()
 	int i;
 	int diceRoll;
 
-	for(i=0; i<20; i++) 
+	for(i=0; i<6; i++) 
 	{
 	   diceRoll = ( rand()%6 ) + 1;
 	   printf("%d \n",  diceRoll);
