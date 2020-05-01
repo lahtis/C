@@ -9,3 +9,4 @@ Simple C programs and functions.
 * string_length.c Calculate String Length without Using strlen() Function.
 * count_number_of_words.c C Program to Count Number of Words in a given Text Or Sentence
 * Problem_of_String_lenghts.c Problems of String Lenghts and how to Cut string to 20 letters.
+* howMany.c How many numbers do you want to avarage? Save to "heap" to memory and free it.
