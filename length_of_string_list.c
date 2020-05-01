@@ -6,7 +6,7 @@
 
 /* in C
 
-   Calculate string size words array.  
+   Calculate string size words of array.  
    Length of String using strlen() Function.
    Counts the number of letters in the name array list.
 
