@@ -6,8 +6,9 @@
 
 /* in C
 
-   Calculate Length of String using strlen() Function.
-   Counts the number of letters in the name list line by line. 
+   Calculate string size words array.  
+   Length of String using strlen() Function.
+   Counts the number of letters in the name array list.
 
 */
 
