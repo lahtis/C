@@ -4,6 +4,7 @@
 /*
     Simple C-program that reads score results from a text file.
     Use malloc function. (heap-> write memory and clean it.)
+    Maybe this is c++. It is not working g++ but works gcc.
 
 */
 typedef struct
