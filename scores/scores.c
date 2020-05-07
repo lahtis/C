@@ -22,6 +22,12 @@ int main() {
     fscanf(file, "%i", &entryCount);
 
     Entry *entries = malloc(sizeof(Entry) * entryCount);
+    
+    if (entries == NULL) {
+	    printf("Error in allocating the data array.\n");
+	return 0;
+    }
+
     printf("Score list\n");
     printf("=======================\n");
     for (int i = 0; i < entryCount; i++)
