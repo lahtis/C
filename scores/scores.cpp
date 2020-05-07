@@ -25,7 +25,7 @@ int main() {
     
     if (entries == NULL) {
 	    printf("Error in allocating the data array.\n");
-	return 0;
+	exit (1);
     }
 
     printf("Score list\n");
