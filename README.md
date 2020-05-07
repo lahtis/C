@@ -10,6 +10,7 @@ Simple C programs and functions. (working in g++) g++ -o main main.c
 * count_number_of_words.c C Program to Count Number of Words in a given Text Or Sentence
 * Problem_of_String_lenghts.c Problems of String Lenghts and how to Cut string to 20 letters.
 * howMany.c How many numbers do you want to avarage? Save to "heap" to memory and free it.
+* heap.c How to heap working in C.
 
 # C++
 C++ programs and functions (not working g++ but works in GCC) gcc -o main main.cpp
