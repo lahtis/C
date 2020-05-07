@@ -1,6 +1,6 @@
 # Only C archive
 
-Simple C programs and functions.
+Simple C programs and functions. (working in g++) g++ -o main main.c
 
 * diceRoll.c random 1-6 diceRoll generator with C code. 
 * hash_table.c example of creating a hash table in C code.
@@ -10,4 +10,6 @@ Simple C programs and functions.
 * count_number_of_words.c C Program to Count Number of Words in a given Text Or Sentence
 * Problem_of_String_lenghts.c Problems of String Lenghts and how to Cut string to 20 letters.
 * howMany.c How many numbers do you want to avarage? Save to "heap" to memory and free it.
-* scores/scores.c Simple C-program that reads score results from a text file.
+
+C++ programs and functions (not working g++ but works in GCC) gcc -o main main.cpp
+* scores/scores.cpp Simple C++-program that reads score results from a text file.
