@@ -3,9 +3,9 @@
 
 
 /*
-    Simple C++ -program that reads score results from a text file.
+    Simple C -program that reads score results from a text file.
     Use malloc function. (heap-> write memory and clean it.)
-    This is C++ code. It only compile gcc.
+    There is some C++ code in 40 line. It only compile gcc. 
 
 */
 typedef struct
