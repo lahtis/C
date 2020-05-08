@@ -1,6 +1,6 @@
 # Only C archive
 
-Simple C programs and functions. (working in g++) g++ -o main main.c
+Simple C programs and functions. (working in GCC) gcc main.c -o main
 
 * diceRoll.c random 1-6 diceRoll generator with C code. 
 * hash_table.c example of creating a hash table in C code.
@@ -12,6 +12,6 @@ Simple C programs and functions. (working in g++) g++ -o main main.c
 * howMany.c How many numbers do you want to avarage? Save to "heap" to memory and free it.
 * heap.c How to heap working in C.
 
-# C++
+# And C++ archive to simple programs and functions (working g++) g++ main.cpp -o main
 C++ programs and functions (not working g++ but works in GCC) gcc -o main main.cpp
 * scores/scores.cpp Simple C++-program that reads score results from a text file.
