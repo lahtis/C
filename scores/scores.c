@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 /*
     Simple C -program that reads score results from a text file.
     Use malloc function. (heap-> write memory and clean it.)
-    There is some C++ code in 40 line. It only compile gcc. 
-
+    gcc main.c -o main
+    It only compile gcc
 */
+
 typedef struct
 {
     char *name;
