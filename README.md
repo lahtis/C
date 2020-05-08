@@ -11,6 +11,7 @@ Simple C programs and functions. (working in GCC) gcc main.c -o main
 * Problem_of_String_lenghts.c Problems of String Lenghts and how to Cut string to 20 letters.
 * howMany.c How many numbers do you want to avarage? Save to "heap" to memory and free it.
 * heap.c How to heap working in C.
+* scores/scores.c Simple C -program that reads score results from a text file.
 
 # And C++ archive to simple programs and functions (working g++) g++ main.cpp -o main
 
