@@ -4,7 +4,7 @@
 /*
     Simple C++ -program that reads score results from a text file.
     Use malloc function. (heap-> write memory and clean it.)
-    It only compile g++    g++ -o main.cpp main
+    It only compile g++    g++ main.cpp -o main
 
 */
 typedef struct
