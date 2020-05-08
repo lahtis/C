@@ -13,6 +13,7 @@ Simple C programs and functions. (working in GCC) gcc main.c -o main
 * heap.c How to heap working in C.
 * scores/scores.c Simple C -program that reads score results from a text file.
 
-# And C++ archive to simple programs and functions (working g++) g++ main.cpp -o main
+# And C++ archive
+Simple programs and functions (working g++) g++ main.cpp -o main
 
 * c++/scores/scores.cpp Simple C++-program that reads score results from a text file.
