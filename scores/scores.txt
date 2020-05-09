@@ -1,4 +1,14 @@
-5 Kalle 532
-4 Mari 5000
-7 Viljami 48700
-3 Anu 47202
+Juho 1200
+Kalle 5
+Matti 1233
+Johan 200
+Antti 11
+Heikki 23
+Karl 34
+Frans 555
+Kustaa 900
+Pekka 400
+August 1
+Otto 4
+Mikko 5
+Jaakko 7
