@@ -1,4 +1,3 @@
-4
 5 Kalle 532
 4 Mari 5000
 7 Viljami 48700
