@@ -3,10 +3,15 @@
 
 /*
     Simple C -program that reads score results from a text file.
+
+    Counts all lines.
+    Read from the beginning of the line how many characters are stored.
     Use malloc function. (heap-> write memory and clean it.)
+    Print it all.
+
     gcc main.c -o main
-    It only compile gcc
 */
+
 
 typedef struct
 {
@@ -14,28 +19,49 @@ typedef struct
     int score;
 } Person;
 
-
 int main() {
 
-    FILE *file = fopen("scores.txt", "r");
+    int personCount=0;
+    char chr;
 
-    int PersonCount;
-    fscanf(file, "%i", &PersonCount);
+    FILE *file = fopen("names.txt", "r");
 
-    Person *entries = (Person *)malloc(sizeof(Person) * PersonCount);
+    if(file== NULL) {
+      perror("Error in opening file. File not found.");
+      return(-1);
+    }
+    else
 
-    if (entries == NULL) {
-	printf("Error in allocating the data array.\n");
-	exit (1);
+   //extract text from file and store in chr
+
+    chr = getc(file);
+
+    while (chr != EOF)
+
+    {
+        //Count whenever new line is encountered
+
+        if (chr == '\n')
+        {
+            personCount++;
+        }
+
+        //take next line from file.
+
+        chr = getc(file);
     }
 
+    fseek(file, 0, SEEK_SET);  // Return the beginner of the file
+    Person *entries = (Person *)malloc(sizeof(Person) * personCount);
 
-    printf("Score list\n");
+    printf("Score list %d\n", personCount); // show how many line or person have to show
     printf("=======================\n");
-    for (int i = 0; i < PersonCount; i++)
+
+    for (int i = 0; i < personCount; i++)
     {
         int nameLen;
-        fscanf(file, "%i", &nameLen);
+
+        fscanf(file, "%i", &nameLen);  // Read the name lenght the first column of the row.
 
         entries[i].name = malloc(sizeof(char) * (nameLen + 1));
         fscanf(file, "%s %i", entries[i].name, &entries[i].score);
@@ -46,10 +72,11 @@ int main() {
     //clean up
     fclose(file);
 
-    for (int i = 0; i < PersonCount; i++)
+    for (int i = 0; i < personCount; i++)
         free(entries[i].name);
 
     free(entries);
 
     return 0;
 }
+
