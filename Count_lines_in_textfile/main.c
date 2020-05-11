@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 /*
-    Simple example how to count text files lines in C programming.
+    Simple example how to count lines text file in C-program.
 */
-
 
 int main() {
 
@@ -11,7 +10,7 @@ int main() {
     nline=0;
 
     /* Open words file */
-    FILE *f = fopen("names.txt", "r");
+    FILE *f = fopen("./names.txt", "r");
 
     if (f == NULL) {
         perror("Unable to locate names list");
@@ -20,11 +19,11 @@ int main() {
 
     int c = getc(f);
     while (c != EOF){	
-	      c = getc(f);
+	c = getc(f);
         if (c== '\n')
           nline++;
         }
-    printf("Lines:%d\n", nline);
+    printf("nline:%d\n", nline);
     fclose(f);
     return 0;
 }
