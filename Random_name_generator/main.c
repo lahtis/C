@@ -1,11 +1,10 @@
 /*
     Simple C -program that reads names from a text file and return one random name.
-
-    Counts all lines.
+    Random names han change NUM_WORDS.
+    Counts all lines. (nline)
     Read from the beginning of the line how many characters are stored.
     Read names in line and count characters and return the results program use.
     Print random name.
-
     gcc main.c -o main
 */
 
@@ -14,83 +13,61 @@
 #include <string.h>
 #include <time.h>
 
-int count_char(char names);
-
-int count_char(char names) { // Counts letters from a word. aka name Antti has 5 letters.
-    int countResults = 0;
-
-    for (int i = 0; names != '\0'; i++){
-
-        if (names == ' ' && names != ' ')
-        countResults++;
-
-    }
-    return countResults;
-}
+#define NUM_WORDS  1   // how many names generated.
 
 int main(void)
 {
-    int personCount=0, n1;
-    char chr, names;
+    int nline;
+    nline=0;
     time_t t;
 
     /* Open words file */
-    FILE *file = fopen("./names.txt", "r");
+    FILE *fp = fopen("names.txt", "r");
 
-    if (file == NULL) {
-        perror("Unable to locate names list");
+    if (fp == NULL) {
+        perror("Unable to locate word list");
         exit(EXIT_FAILURE);
     }
 
-    chr = getc(file);
+    int c = getc(fp);
+    while (c != EOF){	
+	c = getc(fp);
+        if (c== '\n')
+          nline++;
+    }
+    fseek(fp, 0, SEEK_SET);  // Return the beginner of the file
 
-    while (chr != EOF)
 
-    {
-        //Count whenever new line is encountered
-
-        if (chr == '\n')
-        {
-            personCount++;
-        }
-
-        //take next line from file.
-
-        chr = getc(file);
+    /* Count words in file */
+    char word[nline];
+    long wc = 0;
+    while (fgets(word, sizeof word, fp) != NULL) {
+        ++wc;
     }
 
-    fseek(file, 0, SEEK_SET);  // Return the beginner of the file
-
-
-    // Count words in line 
-    char word[personCount];
-    long wc = 0;
-    while (fgets(word, sizeof word, file) != NULL) {
-        ++wc;
-        n1 = count_char(n1); // Function counts letters from a word and return the results  
-    } 
-    printf("%i", n1);
-    /* Store random names in array */
-    char randnames[personCount][n1];
+    /* Store random words in array */
+    char randwords[NUM_WORDS][nline];
     srand((unsigned)time(&t));
-    for (size_t i = 0; i < personCount; i++) {
-        rewind(file);
-        int sel = rand() %wc + 1;
+    for (size_t i = 0; i < NUM_WORDS; i++) {
+        rewind(fp);
+        int sel = rand() % wc + 1;
         for (int j = 0; j < sel; j++) {
-            if (fgets(word, sizeof word, file) == NULL) {
+            if (fgets(word, sizeof word, fp) == NULL) {
                 perror("Error in fgets()");
             }
         }
-        strcpy(randnames[i], word);
+        strcpy(randwords[i], word);
     }
 
-
-    if (fclose(file) != 0) {
+    if (fclose(fp) != 0) {
         perror("Unable to close file");
-    } 
-    fclose(file); 
+    }
+    fclose(fp);
 
-    printf("%s", randnames[0]);
-  
+    /* Display results */
+    for (size_t i = 0; i < NUM_WORDS; i++) {
+        printf("%s", randwords[i]);
+    }
+
     return 0;
 }
