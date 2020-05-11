@@ -38,7 +38,7 @@ int main() {
         int nameLen;
         fscanf(file, "%i", &nameLen);
 
-        entries[i].name = malloc(sizeof(char) * (nameLen + 1)); // there is some c code it can only compiled gcc. not g++
+        entries[i].name = malloc(sizeof(char) * (nameLen + 1)); 
         fscanf(file, "%s %i", entries[i].name, &entries[i].score);
 
         printf("%i. %s - %i\n", i + 1, entries[i].name, entries[i].score);
