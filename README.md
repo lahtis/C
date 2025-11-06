@@ -12,6 +12,8 @@ Simple C programs and functions. (working in GCC) gcc main.c -o main
 * howMany.c How many numbers do you want to avarage? Save to "heap" to memory and free it.
 * heap.c How to heap working in C.
 * scores/scores.c Simple C -program that reads score results from a text file.
+* version_string-a.c hownto copy minor, major... version of main code use.
+* version_string.c how to copy version_string to program
 
 # And C++ archive
 Simple programs and functions (working g++) g++ main.cpp -o main
