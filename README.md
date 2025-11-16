@@ -14,6 +14,7 @@ Simple C programs and functions. (working in GCC) gcc main.c -o main
 * scores/scores.c Simple C -program that reads score results from a text file.
 * version_string-a.c hown to copy minor, major version string of main code.
 * version_string.c how to copy simple version_string to main code.
+* commandline_flags How to read commaandfile flags and print it.
 
 # And C++ archive
 Simple programs and functions (working g++) g++ main.cpp -o main
