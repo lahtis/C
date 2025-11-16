@@ -17,6 +17,7 @@ Simple C programs and functions. (working in GCC) gcc main.c -o main
 * commandline_flags How to read commaandfile flags and print it.
 * named_pipe-FIFO.c How to use cross-platform sender for FIFO and named pipes.
 * reader_for_FIFO.c How to use cross-platform reader for FIFO and Named Pipes
+* CSVtoJSON.c Change CSV- to JSON-data.
 
 # And C++ archive
 Simple programs and functions (working g++) g++ main.cpp -o main
